@@ -14,3 +14,8 @@ c:\users\alexa\Source\Repos\BankTranfertLibrary\BankTransfertLibraryTest\obj\Deb
 c:\users\alexa\Source\Repos\BankTranfertLibrary\BankTransfertLibraryTest\obj\Debug\netcoreapp2.0\BankTransfertLibraryTest.AssemblyInfo.cs
 c:\users\alexa\Source\Repos\BankTranfertLibrary\BankTransfertLibraryTest\obj\Debug\netcoreapp2.0\BankTransfertLibraryTest.dll
 c:\users\alexa\Source\Repos\BankTranfertLibrary\BankTransfertLibraryTest\obj\Debug\netcoreapp2.0\BankTransfertLibraryTest.pdb
+C:\Users\Stark\Documents\Visual Studio 2017\Projects\BankTransfert\BankTranfertLibrary\BankTransfertLibraryTest\bin\Debug\netcoreapp2.0\BankTransfertLibraryTest.deps.json
+C:\Users\Stark\Documents\Visual Studio 2017\Projects\BankTransfert\BankTranfertLibrary\BankTransfertLibraryTest\bin\Debug\netcoreapp2.0\BankTransfertLibraryTest.runtimeconfig.json
+C:\Users\Stark\Documents\Visual Studio 2017\Projects\BankTransfert\BankTranfertLibrary\BankTransfertLibraryTest\bin\Debug\netcoreapp2.0\BankTransfertLibraryTest.runtimeconfig.dev.json
+C:\Users\Stark\Documents\Visual Studio 2017\Projects\BankTransfert\BankTranfertLibrary\BankTransfertLibraryTest\obj\Debug\netcoreapp2.0\BankTransfertLibraryTest.csprojResolveAssemblyReference.cache
+C:\Users\Stark\Documents\Visual Studio 2017\Projects\BankTransfert\BankTranfertLibrary\BankTransfertLibraryTest\obj\Debug\netcoreapp2.0\BankTransfertLibraryTest.AssemblyInfo.cs

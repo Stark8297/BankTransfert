@@ -10,9 +10,9 @@ namespace BankTranfertLibrary
         Warning,
         Error,
     }
-    public class Logger
+    public class Logger : ILogger
     {
-        public void Log(Severity severity, string message)
+        public void Handle(Severity severity, string message)
         {
             Console.WriteLine($"{severity.ToString()} - {message}");
         }

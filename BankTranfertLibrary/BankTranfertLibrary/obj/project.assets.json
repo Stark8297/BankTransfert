@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Microsoft.NETCore.App/2.0.0": {
@@ -194,7 +194,7 @@
           "lib/netstandard1.0/_._": {}
         },
         "build": {
-          "build/netstandard2.0/NETStandard.Library.targets": {}
+          "build/NETStandard.Library.targets": {}
         }
       }
     }
@@ -664,61 +664,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexa\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Stark\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Cours\\M2\\Exercice\\BankTransfert\\BankTranfertLibrary\\BankTranfertLibrary\\BankTranfertLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Stark\\Documents\\Visual Studio 2017\\Projects\\BankTransfert\\BankTranfertLibrary\\BankTranfertLibrary\\BankTranfertLibrary.csproj",
       "projectName": "BankTranfertLibrary",
-      "projectPath": "D:\\Dev\\Cours\\M2\\Exercice\\BankTransfert\\BankTranfertLibrary\\BankTranfertLibrary\\BankTranfertLibrary.csproj",
-      "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Cours\\M2\\Exercice\\BankTransfert\\BankTranfertLibrary\\BankTranfertLibrary\\obj\\",
+      "projectPath": "C:\\Users\\Stark\\Documents\\Visual Studio 2017\\Projects\\BankTransfert\\BankTranfertLibrary\\BankTranfertLibrary\\BankTranfertLibrary.csproj",
+      "outputPath": "C:\\Users\\Stark\\Documents\\Visual Studio 2017\\Projects\\BankTransfert\\BankTranfertLibrary\\BankTranfertLibrary\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
-        },
-        "imports": [
-          "net461"
-        ],
-        "assetTargetFallback": true,
-        "warn": true
+        }
       }
     }
   }

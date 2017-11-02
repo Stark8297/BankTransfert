@@ -8,47 +8,45 @@ namespace BankTranfertLibrary
 {
     public class BankTransfert
     {
-        Logger log = new Logger();
+        // Logger
+        FileLogger log = new FileLogger();
+        // Sauvegarde transaction en .csv
+        CsvWriter csv = new CsvWriter();
 
+        // Méthode de transfert
         public bool Transfert(uint transactionId, decimal amount, string fromBankIban, string toBankIban)
         {
-            if (string.IsNullOrEmpty(fromBankIban) || string.IsNullOrEmpty(toBankIban))
+            // Transfert non effectué par défault.
+            bool hasTransfered = false;
+
+            try
             {
-                log.Log(Severity.Error, "Both IBAN should have a value");
-                throw new ArgumentNullException();
+                // Test des paramètres IBAN
+                string.IsNullOrEmpty(fromBankIban);
+                string.IsNullOrEmpty(toBankIban);
+
+                // On effectue le transfert
+                hasTransfered = EmulateTransfert(amount, fromBankIban, toBankIban);
+                // On appelle la sauvegarde de transaction
+                csv.writeTransaction(transactionId, amount, fromBankIban, toBankIban);
             }
-
-            var hasTransfered = EmulateTransfert(amount, fromBankIban, toBankIban);
-
-            if (!hasTransfered)
+            catch (ArgumentNullException e) when ((string.IsNullOrEmpty(fromBankIban)) || (string.IsNullOrEmpty(toBankIban)))
             {
-                log.Log(Severity.Error, "Transfert interrupted");
-                throw new InvalidOperationException();
+                log.Handle(Severity.Error, e.ToString());
+                throw e;
             }
-
-            //write csv
-            var csv = new StringBuilder();
-            // chemin : BankTranfertLibrary\BankTransfertLibraryTest\bin\Debug\netcoreapp2.0
-            var csvTitle = $"transaction_{DateTime.Now.ToString("dd_MM_yy")}.csv";
-
-            if (!File.Exists(csvTitle))
+            catch (InvalidOperationException e) when (!hasTransfered)
             {
-                using (StreamWriter sw = File.CreateText(csvTitle))
-                {
-                    sw.WriteLine("Transaction;Amount;From;To");
-                }
+                log.Handle(Severity.Error, e.ToString());
+                throw e;
             }
-
-            var line = $"{transactionId};{amount};{fromBankIban};{toBankIban}";
-            using (StreamWriter sw = File.AppendText(csvTitle))
+            catch (Exception e)
             {
-                sw.WriteLine(line);
+                log.Handle(Severity.Error, e.ToString());
+                throw e;
             }
-
-
-            return true;
+            return hasTransfered;
         }
-
 
         /// <summary>
         /// Cette méthode émule une transfert bancaire vers un tiers
@@ -59,10 +57,7 @@ namespace BankTranfertLibrary
         public bool EmulateTransfert(decimal amount, string fromBankIban, string toBankIban)
         {
             System.Threading.Thread.Sleep((int)TimeSpan.FromSeconds(4).TotalMilliseconds);
-
             return true;
         }
-
-
     }
 }
